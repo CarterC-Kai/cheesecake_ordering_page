@@ -1,0 +1,41 @@
+#topbuttons {
+	margin-left: 50px;
+	margin-top: -38px;
+}
+			
+#notes {
+	margin-top: -20px;
+	resize: none;
+}
+			
+#buyhistory {
+	font-size: 20px;
+}
+			
+#month {
+	display: inline-block;
+	width: 65px;
+	height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: "Times New Roman";
+}
+
+#imageborder {
+    border: 10px solid rgba(102, 103, 171, 0.5);
+}
+
+#toppingtext {
+	margin-top: -15px;
+}
+
+#catchphrase {
+	font-family: "Lucida Handwriting";
+	margin-top: -15px;
+	margin-left: 15px;
+	margin-bottom: -15px;
+}
+
+body {
+	background: rgba(37, 150, 190, 0.1);
+}

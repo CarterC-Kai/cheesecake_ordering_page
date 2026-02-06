@@ -1,0 +1,91 @@
+<!-- Notepad++ was used to make this -->
+<!-- Made by: Carter Chan -->
+
+<!--
+External Citation
+  Date: 1/21/2025
+  Problem: Did not know how radio buttons, textarea & select worked in html
+  
+  Resource:
+	https://www.w3schools.com/tags/att_input_type_radio.asp
+	https://www.w3schools.com/tags/tag_select.asp
+	https://www.w3schools.com/tags/tag_textarea.asp
+  Solution: Took code from these sites
+-->
+	
+<html>
+	<head>
+	
+		<title>
+			Cheesecake Ordering page
+		</title>
+		
+		<link rel="stylesheet" href="stylesheets/CHANC28.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<script src="javascripts/CHANC28.js"></script>
+
+	</head>
+	
+	<body>
+		<h1>Cheesecake Manufactory</h1>
+		<h3 id = "catchphrase">Your reliable place for Cheesecake!</h3><br>
+		<img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Baked_cheesecake_with_raspberries_and_blueberries.jpg/250px-Baked_cheesecake_with_raspberries_and_blueberries.jpg" 
+		id = "imageborder" width="550" height="400">
+		
+		<div id="orderInfo">
+		
+			<h2>Let's get you started!</h2>
+		
+			<h3 id = "toppingtext">Type & Quantity of Toppings</h3>
+			
+			<!-- divs surrounding the dropdown menu and the radio buttons ensure that both of them will stay in place -->
+			
+			<select id = "quantityOfCheesecakes">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+			
+				
+			<div id = "topbuttons">
+				<!-- The name parameter makes sure there aren't 2 radio buttons picked at once -->
+				<input type="radio" name="fav_topping" id="blueberry">
+				<label>Blueberry</label><br>
+				<input type="radio" name="fav_topping" id="strawberry">
+				<label>Strawberry</label><br>
+				<input type="radio" name="fav_topping" id="wildberry">
+				<label>Wildberry</label><br>
+			</div>
+			
+			<h3>Notes:</h3>
+			<textarea id="notes" rows="4" cols="50" placeholder="Enter any desired modifications here"></textarea><br><br>
+			
+			<input type="button" value="Order" id="placeOrder">
+			
+		</div>
+		
+		<h2> Total Orders
+		<select id="month">
+			<option value="Jan">Jan</option>
+			<option value="Feb">Feb</option>
+			<option value="Mar">Mar</option>
+			<option value="Apr">Apr</option>
+			<option value="May">May</option>
+			<option value="Jun">Jun</option>
+			<option value="Jul">Jul</option>
+			<option value="Aug">Aug</option>
+			<option value="Sept">Sept</option>
+			<option value="Oct">Oct</option>
+			<option value="Nov">Nov</option>
+			<option value="Dec">Dec</option>
+		</select>
+		</h2>
+		<p style="font-size: 20px;">
+			11 Blueberry<br>
+			12 Strawberry<br>
+			4 wildberry
+		</p>
+	</body>
+</html>
