@@ -25,7 +25,7 @@ $(document).ready(function() {
 		// checks if the word vegan is written in notes
 		var textarea = document.getElementById('notes');
 		var vegan = "vegan";
-		var comments = textarea.value.toLowerCase();
+		var comments = textarea.value;
 		
 		// checks if the word vegan is in the notes section
 		// and asks for confirmation
@@ -41,4 +41,18 @@ $(document).ready(function() {
 		$("#orderInfo").replaceWith("<h2>Thank you for placing your order!</h2><p>" + orderDetails + "</p>");
 		
 	})
+
+	$.post("/orders", function(data) {
+		// create a string to display the order history
+		let orderHistory = "";
+		let i = 0;
+
+		// loop through the data to concatenate to the order history string
+		for (i = 0; i < data.length; i++) {
+			orderHistory += data[i].quantity + " " + data[i].topping + " <br>";
+		}
+
+		// display the order history string
+		$("#orderHistory").html(orderHistory);
+	});
 });
